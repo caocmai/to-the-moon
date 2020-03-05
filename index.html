@@ -34,12 +34,12 @@
 
 		.bgimg-2 {
 			background-image: url("view.jpg");
-			min-height: 400px;
+			min-height: 500px;
 		}
 
 		.bgimg-3 {
 			background-image: url("moon.jpg");
-			min-height: 400px;
+			min-height: 500px;
 		}
 
 		.caption {
@@ -70,7 +70,7 @@
 			position: fixed;
 			z-index: 999;
 			left: 0;
-			top: 50%;
+			top: 46%;
 			transform: translate(0, -50%);
 			display: flex;
 			flex-direction: column;
@@ -79,17 +79,34 @@
 		.nav-bar > a {
 			display: block;
 			text-decoration: none;
-			padding: 3em;
-			background-color: rgba(255, 255, 255, 0.4);
+			/* padding: 4em; */
+			padding: 2em 3em 2em 3em;
+			background-color: rgba(197, 194, 194, 0.7);
 			color: #000;
 		}
 
-
 		a.selected {
-			background-color: rgba(223, 19, 19, 0.5);
+			background-color: rgba(223, 19, 19, 0.9);
 			color: #fff;
 		}
 
+		#b {
+			color: #777;
+			background-color:white;
+			text-align:center;
+			padding:50px 80px;
+			margin-left: 100px;
+			text-align: justify;
+		}
+
+		.caption span.border2{
+			background-color:transparent;
+			font-size:25px;
+			color: #f7f7f7;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 10px;
+		}
 
 		/* Turn off parallax scrolling for tablets and phones */
 		@media only screen and (max-device-width: 1024px) {
@@ -107,26 +124,24 @@
 <body>
 
 	<div class="nav-bar">
-		<a href="#a">Page1</a>
-		<a href="#b">Page2</a>
-		<a href="#c">Page3</a>
-		<a href="#d">Page4</a>
-		<a href="#e">Page5</a>
+		<a href="#a">HOME</a>
+		<a href="#b">INFO</a>
+		<a href="#d">PRICING</a>
+		<a href="#d">PRICING</a>
+		<a href="#e">LET'S GO</a>
 	  </div>
 
 	
-
+		
 	<div id="a" class="bgimg-1 a">
-		<div class="caption" data-aos="fade-up"
-		data-aos-anchor-placement="center-bottom">
+		<div class="caption" data-aos="fade-up-left">
 			<span class="border">BE HERE</span>
 		</div>
 	</div>
 
-	<div id="b" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+	<div id="b" style=>
 		<h3 style="text-align:center;">Going to the Moon</h3>
-		<p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
-			foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
+		<p> Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
 			posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit
 			dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur
 			aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl
@@ -136,9 +151,9 @@
 			augue etiam maecenas, porta porttitor placerat leo.</p>
 	</div>
 
-	<div  class="bgimg-2 b">
+	<div  id="c" class="bgimg-2 b">
 		<div class="caption">
-			<span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">THE VIEW</span>
+			<span class="border2">THE VIEW</span>
 		</div>
 	</div>
 
@@ -148,27 +163,28 @@
 		</div>
 	</div>
 
-	<div id="c" class="bgimg-3 c" data-aos="fade-right">
+	<div id="d" class="bgimg-3 c" data-aos="zoom-in">
 		<div class="caption">
-			<span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+			<span class="border2" style=>YOUR DESTINATION</span>
 		</div>
 	</div>
 
 	<div style="position:relative;" data-aos="fade-up">
-		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;" data-aos="fade-down-right">
-			<p>How vaction to the moon works.</p>
+		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+			<p data-aos="fade-left">How vaction to the moon works.</p>
 		</div>
 	</div>
 
-	<div id="d" class="bgimg-1" >
+	<div id="e" class="bgimg-1" >
 		<div class="caption" data-aos="fade-up-right">
-			<span class="border">COOL!</span>
+			<span class="border">SEE YOU SOON!</span>
 		</div>
 	</div>
 
-	<div id="e">
+	<div id="f">
 
 	</div>
+
 
 	
 
