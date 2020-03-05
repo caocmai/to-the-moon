@@ -118,6 +118,130 @@
 			}
 		}
 
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+		@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+		:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.gallery-container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+.container {
+  width: 1090px;
+  min-width: 600px;
+  height: 430px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.container .card {
+  width: 330px;
+  height: 430px;
+  float: left;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  text-align: center;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.container .card:nth-child(2) {
+  margin: 0 50px;
+}
+.container .card:hover {
+  top: -15px;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.container .card h4 {
+  font-weight: 600;
+}
+.container .card p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+.container .card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #3498db;
+}
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
 	</style>
 </head>
 
@@ -126,8 +250,7 @@
 	<div class="nav-bar">
 		<a href="#a">HOME</a>
 		<a href="#b">INFO</a>
-		<a href="#d">PRICING</a>
-		<a href="#d">PRICING</a>
+		<a href="#d">PACKAGES</a>
 		<a href="#e">LET'S GO</a>
 	  </div>
 
@@ -159,7 +282,33 @@
 
 	<div style="position:relative;">
 		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-			<p>The pricing here .</p>
+			<div class="gallery-container">
+				<div class="gallery">
+			
+					<div class="gallery-item">
+						<img class="gallery-image"
+							src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop">
+					</div>
+			
+					<div class="gallery-item">
+						<img class="gallery-image"
+							src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop">
+=					</div>
+			
+					<div class="gallery-item">
+						<img class="gallery-image"
+							src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop">
+					</div>
+			
+					<div class="gallery-item">
+						<img class="gallery-image"
+							src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop">
+					</div>
+
+			
+				</div>
+			
+			</div>
 		</div>
 	</div>
 
